@@ -1,0 +1,55 @@
+@import '../../style/mixin.less';
+
+.header-container{
+  .wh(100%, 2.35rem);
+  .flex(space-between,center);
+  text-align: center;
+  background: #d80c18;
+  color: #fff;
+  padding:0 .5rem;
+  position: fixed;
+  top: 0;
+  .header-left{
+    font-size: 0.8rem;
+    .wh(auto, 2.35rem);
+    line-height: 2.35rem;
+    z-index: 100;
+    .backwrap{
+      display: inline-block;
+      .wh(auto, 2.35rem);
+      .backimg {
+        .wh(0.55rem, 1.1rem);
+        vertical-align: middle;
+        position: relative;
+        top: -0.04rem;
+      }
+      .back{
+        font-size: 0.8rem;
+        color: #fff;
+        margin-left: 0.5rem;
+        height: 2.35rem;
+        line-height: 2.35rem;
+      }
+      .guanbi{
+        height: 2.35rem;
+        line-height: 2.35rem;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+  .header-title{
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    height: 2.35rem;
+    line-height: 2.35rem;
+    font-size: 0.9rem;
+  }
+  .header-right{
+    display: inline-block;
+    height: 2.35rem;
+    line-height: 2.35rem;
+    font-size: .9rem;
+  }
+}
