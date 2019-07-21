@@ -1,10 +1,12 @@
 import React, {Component} from 'react'
+
+import "babel-polyfill";
 import  '@/style/mixin.less';
 import './header.less'
 //头部图片
 import cssbacktop from "@/assets/back.png"
 // import { connect } from 'react-redux'
-
+import history from '@/history';
 class Header extends Component {
   constructor(props){
     super(props)
@@ -20,16 +22,20 @@ class Header extends Component {
   }
 
   handBack = () => {
-    console.log("返回")
-    // this.props.history.goBack()
+    console.log(history)
+    // const history = creatHistory();
+    // history.goBack();
+    // this.props.history.go(-1)
+    history.go(-1)
   }
   handClone = () => {
     console.log("关闭")
 
   }
-  shouldComponentUpdate(nextProps, nextState) {
-   // 判断是否要更新render, return true 更新  return false不更新
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //  // 判断是否要更新render, return true 更新  return false不更新
+   
+  // }
   render () {
     return (
       <header className="header-container">

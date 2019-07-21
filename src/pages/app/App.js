@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import logo from '@/assets/logo.svg';
 import '@/pages/app/App.css';
 import http from '@/config/http'
-import { Button,Badge } from 'antd-mobile';
 import  Headers from "@/components/header/header"
 
 //图片
