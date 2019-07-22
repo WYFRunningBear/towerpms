@@ -57,11 +57,24 @@ class todolist extends Component{
 			],
 			refreshing: false,
 			down: true,
-			height: document.documentElement.clientHeight,
+			// height: calc(document.documentElement.clientHeight - 44px - 2.35rem) ,
+			height: 510,
 			data: [],
 		}
 		this.onChange = this.onChange.bind(this)
 		this.listItem = this.listItem.bind(this)
+	}
+	componentDidMount(){
+		this.setState({
+			height:document.documentElement.clientHeight
+			-
+			document.documentElement.querySelectorAll(".header-container")[0].clientHeight
+			-
+			44
+			-
+			document.documentElement.querySelectorAll(".am-button")[0].offsetHeight
+
+		})
 	}
 	onChange(val){
 		this.setState({ sear:val});
@@ -94,7 +107,6 @@ class todolist extends Component{
 				<SearchBar placeholder="搜索" value={this.state.sear} onChange={this.onChange} />
                     <div className="content"  >
 					<Button
-						style={{ marginBottom: 15 }}
 						onClick={() => this.setState({ down: !this.state.down })}
 					>
 						direction: {this.state.down ? 'down' : 'up'}
@@ -110,10 +122,19 @@ class todolist extends Component{
 						direction={this.state.down ? 'down' : 'up'}
 						refreshing={this.state.refreshing}
 						onRefresh={() => {
+							if(this.state.down === true){
+								//下拉刷新
+								console.log("下拉刷新");
+								
+							}else{
+								//上拉加载
+								console.log("上拉加载");
+
+							}
 						this.setState({ refreshing: true });
 						setTimeout(() => {
 							this.setState({ refreshing: false });
-						}, 1000);
+						}, 2000);
 						}}
 					>
 						{
