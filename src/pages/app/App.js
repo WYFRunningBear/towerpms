@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import '@/pages/app/App.css';
+import '@/pages/app/App.less';
 import http from '@/config/http'
 import  Headers from "@/components/header/header"
 
@@ -48,13 +48,13 @@ class App extends Component {
         <article className="App-article">
          <img className="banner" src={bannerImg} alt="" />
 					<div className="banner-bottom" >
-						<a className="external" href="noticeInfo.html">
+          <Link className="external" to='/noticeInfo'>
 							<div className="banner-bottom-box">
 								<div className="notice"></div>
 								<p className="message">{this.state.gonggao}</p>
 							</div>
-						</a>
-						<a href="notice.html" className="more">更多</a>
+						</Link>
+          <Link className="more" to='/noticeInfo'>更多</Link>
 					</div>
             {/* 四个工作台 */}
            <div className="project">
@@ -68,28 +68,28 @@ class App extends Component {
 
 						</div>
 						<div className="col-25">
-							<a className="item" href="run-matters.html">
+              <Link className="item" to='/finishthing'>
 								<div className="item-img">
 									<img src={thing2} alt="" />
 								</div>
 								<p className="item-text">已办事项</p>
-							</a>
+							</Link>
 						</div>
 						<div className="col-25">
-							<a className="item" href="readlist2.html">
+              <Link className="item" to='/todoreadlist'>
 								<div className="item-img">
 									<img src={thing3} alt="" />
 								</div>
 								<p className="item-text">待阅事项</p>
-							</a>
+							</Link>
 						</div>
 						<div className="col-25">
-							<a className="item " href="readedlist2.html">
+							<Link className="item" to='/finishreadlist'>
 								<div className="item-img">
 									<img src={thing4} alt="" />
 								</div>
 								<p className="item-text">已阅事项</p>
-							</a>
+							</Link>
 						</div>
           </div>
             {/* <!-- 常用功能 --> */}
@@ -97,44 +97,44 @@ class App extends Component {
               <div className="common-title">常用功能</div>
               <div className="common-box">
                 <div className="sm-box">
-                  <a className="box-item " href="prjquery.html">
+                  <Link className="box-item" to='/home'>
                     <div className="box-img">
                       <img src={xinquire} alt="" />
                     </div>
                     <p className="box-text">项目查询</p>
-                  </a>
+                  </Link>
                 </div>
                 <div className="sm-box">
-                  <a className="box-item" href="prjcancle.html">
+                  <Link className="box-item" to='/list'>
                     <div className="box-img">
                       <img src={cinquire} alt="" />
                     </div>
                     <p className="box-text">销项查询</p>
-                  </a>
+                  </Link>
                 </div>
                 <div className="sm-box">
-                  <a className="box-item external" href="quality-control.html">
+                  <Link className="box-item" to='/finishthing'>
                     <div className="box-img">
                       <img src={supervision} alt="" />
                     </div>
                     <p className="box-text">质检汇总</p>
-                  </a>
+                  </Link>
                 </div>
                 <div className="sm-box">
-                  <a className="box-item" id="help">
+                  <Link className="box-item" to='/finishthing'>
                     <div className="box-img">
                       <img src={help} alt="" />
                     </div>
                     <p className="box-text">帮助文档</p>
-                  </a>
+                  </Link>
                 </div>
                 <div className="sm-box">
-                  <a className="box-item"href="complaint-proposal.html">
+                  <Link className="box-item" to='/finishthing'>
                     <div className="box-img">
                       <img src={suggest} alt="" />
                     </div>
                     <p className="box-text">投诉建议</p>
-                  </a>
+                  </Link>
                 </div>
               </div>
     

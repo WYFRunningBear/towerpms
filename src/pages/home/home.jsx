@@ -13,7 +13,11 @@ class home extends Component{
 	render(){
 		return (
 			<div className="home">
-
+				<div className="list">
+					list
+					<p>主页</p>
+				</div>
+				
 			</div>
 		  );
 	}

@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import '@/pages/todothing/todolist.less'
+import '@/pages/finishthing/finishthing.less'
 import  Headers from "@/components/header/header"
 import { SearchBar, PullToRefresh } from 'antd-mobile';
 //图片
@@ -7,8 +7,8 @@ import liucheng from "@/assets/liucheng.png";
 import zhenggai from "@/assets/zhenggai.png";
 import guanjian from "@/assets/guanjian.png";
 
-//待办列表
-class todolist extends Component{
+//已办列表
+class finishthing extends Component{
 	constructor(props){
 		super(props);
 		this.state = {
@@ -28,28 +28,6 @@ class todolist extends Component{
 				},{
 				signl:"LC",
 				build_modes:"03",
-				check_code:"17A12SCCD0200218",
-				task_title:"中国铁塔四川分公司成都市2019年江金城意境C区改造铁塔项目",
-				create_date:"2019-07-21 22:14:00"
-				},{
-				signl:"ZG",
-				check_code:"17A12SCCD0200218",
-				task_title:"中国铁塔四川分公司成都市2019年江金城意境C区改造铁塔项目",
-				create_date:"2019-07-21 22:14:00"
-				},{
-				signl:"",
-				check_code:"17A12SCCD0200218",
-				task_title:"中国铁塔四川分公司成都市2019年江金城意境C区改造铁塔项目",
-				create_date:"2019-07-21 22:14:00"
-				},{
-				signl:"LC",
-				build_modes:"08",
-				check_code:"17A12SCCD0200218",
-				task_title:"中国铁塔四川分公司成都市2019年江金城意境C区改造铁塔项目",
-				create_date:"2019-07-21 22:14:00"
-				},{
-				signl:"LC",
-				build_modes:"",
 				check_code:"17A12SCCD0200218",
 				task_title:"中国铁塔四川分公司成都市2019年江金城意境C区改造铁塔项目",
 				create_date:"2019-07-21 22:14:00"
@@ -75,7 +53,6 @@ class todolist extends Component{
 			44
 
 		});
-		// document.documentElement.querySelector("#ptrf").add
 	}
 	onChange(val){
 		this.setState({ sear:val});
@@ -119,8 +96,8 @@ class todolist extends Component{
 	}
 	render(){
 		return (
-			<div className="todolist">
-				<Headers title="待办列表" />
+			<div className="finishthing">
+				<Headers title="已办列表" />
 				<SearchBar placeholder="搜索" value={this.state.sear} onChange={this.onChange} />
                     <div className="content"  >
 					<PullToRefresh
@@ -190,4 +167,4 @@ class todolist extends Component{
 
 }
 
-export default todolist
+export default finishthing
