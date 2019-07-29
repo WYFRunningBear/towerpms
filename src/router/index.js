@@ -5,7 +5,8 @@ import asyncComponent from '@/config/asyncComponent'
 const App = asyncComponent(() => import("@/pages/app/App"))
 const list = asyncComponent(() => import("@/pages/list/list"))
 const home = asyncComponent(() => import("@/pages/home/home"))
-const noticeInfo = asyncComponent(() => import("@/pages/noticeInfo/noticeInfo"))
+const noticeInfo = asyncComponent(() => import("@/pages/notice/noticeInfo/noticeInfo"))
+const notice = asyncComponent(() => import("@/pages/notice/notice"))
 
 const todolist = asyncComponent(() => import("@/pages/todothing/todolist"))
 const finishthing = asyncComponent(() => import("@/pages/finishthing/finishthing"))
@@ -18,7 +19,8 @@ export default class RouteConfig extends Component {
       <HashRouter history={history}>
         <Switch>
            <Route path="/app"  component= {App}/>
-           <Route path="/noticeInfo"  component= {noticeInfo}/>
+           <Route path="/notice/noticeInfo"  component= {noticeInfo}/>
+           <Route path="/notice"  component= {notice}/>
            <Route path="/todolist"  component= {todolist}/>
            <Route path="/finishthing"  component= {finishthing}/>
            <Route path="/todoreadlist"  component= {todoreadlist}/>

@@ -17,6 +17,7 @@ class Header extends Component {
       goHome: '',
       edit: '',
       userInfo: '',
+      guanbinone:this.props.guanbinone?"guanbinone":''
     };
     this.handBack = this.handBack.bind(this)
   }
@@ -43,7 +44,7 @@ class Header extends Component {
             <div  className="backwrap">
                 <img className="backimg"  src={cssbacktop} onClick={this.handBack} alt="" />
                 <span className="back" onClick={this.handBack}>返回</span>
-                <span  className="guanbi" onClick={this.handClone}>关闭</span>
+                <span  className={"guanbi " + this.state.guanbinone} onClick={this.handClone}>关闭</span>
             </div>
 
         </div>

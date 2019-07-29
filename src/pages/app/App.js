@@ -44,17 +44,17 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Headers title="项目管理"/>
+        <Headers title="项目管理" guanbinone="true" />
         <article className="App-article">
          <img className="banner" src={bannerImg} alt="" />
 					<div className="banner-bottom" >
-          <Link className="external" to='/noticeInfo'>
+          <Link className="external" to='/notice/noticeInfo'>
 							<div className="banner-bottom-box">
 								<div className="notice"></div>
 								<p className="message">{this.state.gonggao}</p>
 							</div>
 						</Link>
-          <Link className="more" to='/noticeInfo'>更多</Link>
+          <Link className="more" to='/notice'>更多</Link>
 					</div>
             {/* 四个工作台 */}
            <div className="project">
@@ -113,7 +113,7 @@ class App extends Component {
                   </Link>
                 </div>
                 <div className="sm-box">
-                  <Link className="box-item" to='/finishthing'>
+                  <Link className="box-item" to='/notice'>
                     <div className="box-img">
                       <img src={supervision} alt="" />
                     </div>
